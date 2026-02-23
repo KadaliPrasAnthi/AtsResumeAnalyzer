@@ -31,7 +31,8 @@ const Register = () => {
     setError("");
     setSuccess("");
 
-    const url = "https://atsresumeanalyzer.onrender.com/auth/register";
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://atsresumeanalyzer.onrender.com";
+    const url = `${BACKEND_URL}/auth/register`;
     const userDetails = { name, email, password }
 
     const options = {

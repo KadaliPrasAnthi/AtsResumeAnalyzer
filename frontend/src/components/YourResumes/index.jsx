@@ -31,12 +31,13 @@ const YourResumes = () => {
     formData.append("resume", selectedFile);
  
     try {
+      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://atsresumeanalyzer.onrender.com";
       setLoading(true);
       setError("");
  
       // STEP 1️⃣ Upload Resume
       const uploadResponse = await fetch(
-        "https://atsresumeanalyzer.onrender.com/resume/upload",
+        `${BACKEND_URL}/resume/upload`,
         {
           method: "POST",
           headers: {
@@ -61,7 +62,7 @@ const YourResumes = () => {
       };
  
       const analyzeResponse = await fetch(
-        "https://atsresumeanalyzer.onrender.com/resume/analyze",
+        `${BACKEND_URL}/resume/analyze`,
         {
           method: "POST",
           headers: {
