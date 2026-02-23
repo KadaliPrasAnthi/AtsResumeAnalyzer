@@ -36,7 +36,7 @@ const YourResumes = () => {
  
       // STEP 1️⃣ Upload Resume
       const uploadResponse = await fetch(
-        "http://localhost:3000/resume/upload",
+        "https://atsresumeanalyzer.onrender.com/resume/upload",
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ const YourResumes = () => {
       };
  
       const analyzeResponse = await fetch(
-        "http://localhost:3000/resume/analyze",
+        "https://atsresumeanalyzer.onrender.com/resume/analyze",
         {
           method: "POST",
           headers: {
