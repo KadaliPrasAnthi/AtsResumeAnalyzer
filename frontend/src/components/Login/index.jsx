@@ -23,7 +23,7 @@ const Login = () => {
     setLoading(true)
     setError("")
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://atsresumeanalyzer.onrender.com";
-    const url = `${BACKEND_URL}/auth/login`;
+    const url = `${BACKEND_URL}/login`;
     const userDetails = {
       email,
       password
