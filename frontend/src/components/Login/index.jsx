@@ -19,6 +19,7 @@ const Login = () => {
   };
 
   const handleSubmit = async (event) => {
+    console.log("Form submitted");
     event.preventDefault()
     setLoading(true)
     setError("")
