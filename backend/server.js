@@ -13,7 +13,10 @@ app.use(express.json());
 // Configure CORS to allow requests from the frontend and include Authorization header
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "https://atsresumeanalyzer-frontend.onrender.com",
+    // Allow the configured FRONTEND_URL, otherwise reflect the request origin.
+    // Using `true` causes `cors` to set the Access-Control-Allow-Origin
+    // response header to the request's Origin value.
+    origin: process.env.FRONTEND_URL || true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
