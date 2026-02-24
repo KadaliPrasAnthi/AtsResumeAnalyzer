@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.json());
+
 // Configure CORS to allow requests from the frontend and include Authorization header
 app.use(
   cors({
@@ -18,10 +18,11 @@ app.use(
     // response header to the request's Origin value.
     origin: process.env.FRONTEND_URL || true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    // allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+app.use(express.json());
 
 // Ensure preflight requests are handled
 app.options("*", cors());
