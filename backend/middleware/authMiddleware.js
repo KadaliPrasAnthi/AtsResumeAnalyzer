@@ -4,6 +4,7 @@ export default function (req, res, next) {
   // Let CORS preflight requests pass through without requiring auth
   if (req.method === "OPTIONS") return next();
   const token = req.headers.authorization?.split(" ")[1];
+  console.log("Received token:", token);
   if (!token) return res.status(401).json({ error: "No token" });
 
   try {
