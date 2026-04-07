@@ -16,7 +16,7 @@ app.use(
     // Allow the configured FRONTEND_URL, otherwise reflect the request origin.
     // Using `true` causes `cors` to set the Access-Control-Allow-Origin
     // response header to the request's Origin value.
-    origin: process.env.FRONTEND_URL || true,
+    origin: [process.env.FRONTEND_URL || true, "http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     // allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,

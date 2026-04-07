@@ -2,6 +2,7 @@ import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
+  // console.log(req.body);
   try {
     const user = await User.create(req.body);
     res.json(user);
