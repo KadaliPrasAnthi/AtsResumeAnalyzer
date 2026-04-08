@@ -12,6 +12,7 @@
   padding: 120px 24px 80px;
   position: relative;
   overflow: hidden;
+  width: 100vw;
 }
  
 .resume-container::before {

@@ -7,6 +7,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  width: 100vw;
 }
 
 /* ---- BG ORBS ---- */

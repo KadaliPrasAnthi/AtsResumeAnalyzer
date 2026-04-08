@@ -27,6 +27,7 @@
   background: var(--dark);
   color: var(--text-primary);
   overflow-x: hidden;
+  
 }
 
 /* ---- GRADIENT TEXT ---- */
@@ -48,6 +49,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 120px 24px 80px;
+  width: 100vw;
 }
 
 /* Animated background orbs */
